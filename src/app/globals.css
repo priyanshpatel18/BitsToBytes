@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 /* -----FONTS----- */
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("../fonts/Poppins.ttf");
-}
-@font-face {
-  font-family: "Cal Sans", sans-serif;
-  src: url("../fonts/Cal-Sans.ttf");
-}
-.font-poppins {
-  font-family: "Poppins", sans-serif;
-}
-.font-cal-sans {
-  font-family: "Cal Sans", sans-serif;
-}
-
 .navLink div::after,
 .navLink div::before {
   content: "";
