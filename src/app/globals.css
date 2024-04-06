@@ -18,8 +18,8 @@
   font-family: "Cal Sans", sans-serif;
 }
 
-.navLink span::after,
-.navLink span::before {
+.navLink div::after,
+.navLink div::before {
   content: "";
   position: absolute;
   width: 0;
@@ -29,15 +29,15 @@
   left: 50%;
   transition: width 0.3s ease, left 0.3s ease;
 }
-.navLink span::before {
+.navLink div::before {
   width: 0;
   transform-origin: right;
 }
-.navLink span:hover::after {
+.navLink div:hover::after {
   width: 50%;
   left: 0;
 }
-.navLink span:hover:before {
+.navLink div:hover:before {
   width: 50%;
   left: 50%;
 }

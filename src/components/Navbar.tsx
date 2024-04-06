@@ -5,7 +5,8 @@ import menuBar from "@/assets/menuBar.png";
 import close from "@/assets/close.png"
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from "gsap";
 
 export default function Navbar(): React.ReactNode {
   const navLinks = [
@@ -31,30 +32,45 @@ export default function Navbar(): React.ReactNode {
     }
   ]
 
-  const [showMenuBar, setShowMenuBar] = React.useState(false);
+  useEffect(() => {
+    gsap.fromTo(".logo", {
+      x: "-100%",
+    }, {
+      x: 0,
+      delay: 0
+    })
 
+    gsap.fromTo(".link", {
+      x: "100%",
+    }, {
+      x: 0,
+      delay: 0
+    })
+  }, [])
+
+  const [showMenuBar, setShowMenuBar] = React.useState(false);
   function handleMenuBar() {
     setShowMenuBar(!showMenuBar);
   }
 
   return (
-    <nav className='bg-[#F2F2F2] h-[10vh] p-[1rem] lg:px-[3rem] lg:py-[1.1rem] flex justify-between items-center'>
-      <Link href="/" className='flex justify-center items-center sm:h-[2.5rem]'>
+    <nav className='navBar bg-[#F2F2F2] h-[10vh] px-[3rem] py-[1.1rem] flex justify-between items-center sticky top-0'>
+      <Link href="/" className='flex justify-center items-center overflow-hidden'>
         <Image
           src={logo}
           alt='logo'
-          className='w-full h-full'
+          className='logo w-full h-[2.5rem]'
         />
       </Link>
-      <div className="hidden lg:flex lg:items-center lg:gap-[3rem]">
+      <div className="hidden lg:flex lg:items-center gap-[3rem]">
         {navLinks.map((link, index) => {
           return (
             <Link
               href={link.path}
               key={index}
-              className='relative text-[#000515] capitalize text-[1.5rem] font-medium navLink'
+              className='relative text-[#000515] capitalize text-[1.5rem] font-medium navLink overflow-hidden'
             >
-              <span>{link.name}</span>
+              <div className="link">{link.name}</div>
             </Link>
           )
         })}

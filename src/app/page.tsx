@@ -1,11 +1,10 @@
 import React from "react";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home(): React.ReactNode {
   return (
     <main>
-      <div className="w-full bg-[#000515]">
-        
-      </div>
+      <LandingPage />
     </main>
   );
 }
