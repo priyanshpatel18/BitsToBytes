@@ -54,7 +54,7 @@ export default function Navbar(): React.ReactNode {
   }
 
   return (
-    <nav className='navBar bg-[#F2F2F2] h-[10vh] px-[3rem] py-[1.1rem] flex justify-between items-center sticky top-0 z-10'>
+    <nav className='navBar bg-[#F2F2F2] h-[10vh] px-[3rem] py-[1.1rem] flex justify-between items-center sticky top-0 z-10 border-b-2 border-[#000515]'>
       <Link href="/" className='flex justify-center items-center overflow-hidden'>
         <Image
           src={logo}

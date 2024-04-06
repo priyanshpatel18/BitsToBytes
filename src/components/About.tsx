@@ -18,7 +18,7 @@ export default function About(): React.ReactNode {
   return (
     <div className="h-screen w-full bg-[#42B6E3] flex flex-col items-center py-[4rem]">
       <div>
-        <h1 className={`aboutHeading text-transparent text-[10rem] ${store.getState().calSans} uppercase tracking-widest stroke-2 text-stroke-dark`}>about us</h1>
+        <h1 className={`aboutHeading text-transparent text-[10rem] ${store.getState().calSans} uppercase tracking-widest text-stroke-dark`}>about us</h1>
       </div>
       <div className='flex w-[90%] gap-[2rem] items-center justify-between overflow-hidden'>
         <div className='text-center w-[50%] px-[2rem]'>
