@@ -1,41 +1,30 @@
 "use client";
 
 import store from "@/store/store";
-import gsap from "gsap";
 import React, { useEffect } from "react";
+import gsap from "gsap";
 
 export default function LandingPage(): React.ReactNode {
     const Store = store();
 
     useEffect(() => {
-        gsap.fromTo(
-            [".mainHeading", ".subHeading"],
-            {
-                y: "100%",
-            },
-            {
-                y: 0,
-                delay: 0.2,
-            }
-        );
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
 
-        gsap.fromTo(
-            ".button",
-            {
-                scale: 0,
-            },
-            {
-                scale: 1,
-                delay: 0.2,
-                duration: 0.3,
-            }
-        );
-    }, []);
+            gsap.to(".mainHeading", { y: -scrollY * 0.7, ease: "power4.out" });
+            gsap.to(".subHeading", { y: -scrollY * 0.4, ease: "power4.out" });
+            gsap.to(".button", { y: -scrollY * 0.4, ease: "power4.out" });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
 
     return (
-        <div
-            className={`w-full bg-[#000515] h-[90vh] flex flex-col justify-center items-center select-none p-[1rem] ${Store.calSans}`}
-        >
+        <div className={`w-full bg-[#000515] h-[90vh] flex flex-col justify-center items-center select-none p-[1rem] ${Store.calSans}`}>
             <div className="overflow-hidden">
                 <h1 className="mainHeading text-[#42B6E3] text-[4rem] lg:text-[8rem]">
                     bitstobytes
