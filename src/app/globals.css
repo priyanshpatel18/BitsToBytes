@@ -5,15 +5,11 @@
 /* -----FONTS----- */
 @font-face {
   font-family: "Poppins", sans-serif;
-  src: url("../../public//fonts/Poppins.ttf");
+  src: url("../fonts/Poppins.ttf");
 }
 @font-face {
   font-family: "Cal Sans", sans-serif;
-  src: url("../../public//fonts/Cal-Sans.ttf");
-}
-@font-face {
-  font-family: "Cream Cake", sans-serif;
-  src: url("../../public//fonts/Cream-Cake.otf");
+  src: url("../fonts/Cal-Sans.ttf");
 }
 .font-poppins {
   font-family: "Poppins", sans-serif;
@@ -21,6 +17,27 @@
 .font-cal-sans {
   font-family: "Cal Sans", sans-serif;
 }
-.font-cream-cake {
-  font-family: "Cream Cake", sans-serif;
+
+.navLink span::after,
+.navLink span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  background: #000515;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.navLink span::before {
+  width: 0;
+  transform-origin: right;
+}
+.navLink span:hover::after {
+  width: 50%;
+  left: 0;
+}
+.navLink span:hover:before {
+  width: 50%;
+  left: 50%;
 }
