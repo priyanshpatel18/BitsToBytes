@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import MobileNav from "@/components/MobileNav";
+
 export const metadata = {
     title: "Bits to Bytes",
     description: "Coding Community",
