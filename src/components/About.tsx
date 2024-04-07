@@ -16,14 +16,14 @@ export default function About(): React.ReactNode {
   }, [])
 
   return (
-    <div className="h-screen w-full bg-[#42B6E3] flex flex-col items-center py-[4rem]">
+    <div className="w-full bg-[#42B6E3] flex flex-col items-center py-[2rem] lg:py-[4rem]">
       <div>
-        <h1 className={`aboutHeading text-transparent text-[10rem] ${store.getState().calSans} uppercase tracking-widest text-stroke-dark`}>about us</h1>
+        <h1 className={`aboutHeading text-transparent text-[6rem] lg:text-[10rem] ${store.getState().calSans} uppercase tracking-[1rem] lg:tracking-[2rem] text-stroke-dark lg:flex lg:gap-[2.5rem]`}>about <span className="hidden lg:block">us</span></h1>
       </div>
-      <div className='flex w-[90%] gap-[2rem] items-center justify-between overflow-hidden'>
-        <div className='text-center w-[50%] px-[2rem]'>
+      <div className='flex flex-col lg:flex-row w-[90%] gap-[2rem] items-center justify-between overflow-hidden'>
+        <div className='text-center w-full lg:w-[50%] px-[2rem]'>
           <h2 className={`text-[2rem] ${store.getState().calSans}`}>What is bitstobytes?</h2>
-          <p className='text-[1.7rem]'>
+          <p className='text-[1rem] lg:text-[1.7rem]'>
             Being a programming club,
             we assure pretty much everything you ask for!
             From inspiring events and workshops to captivating lectures and talks,
@@ -31,7 +31,7 @@ export default function About(): React.ReactNode {
             Our community of like-minded individuals is always willing to lend a helping hand in any way we can.
           </p>
         </div>
-        <div className='w-[50%]'>
+        <div className='wi-full lg:w-[50%]'>
           <Image
             src={demoAbout}
             alt='aboutImage'

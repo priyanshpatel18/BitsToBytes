@@ -59,7 +59,7 @@ export default function Navbar(): React.ReactNode {
         <Image
           src={logo}
           alt='logo'
-          className='logo w-full h-[2.5rem]'
+          className='lg:logo w-full h-[2.5rem]'
         />
       </Link>
       <div className="hidden lg:flex lg:items-center gap-[3rem]">
