@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function MenuBar() {
-  return (
-    <div>MenuBar</div>
-  )
+
+    return <div>MenuBar</div>;
+    
 }

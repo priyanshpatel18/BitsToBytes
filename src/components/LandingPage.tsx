@@ -21,10 +21,12 @@ export default function LandingPage(): React.ReactNode {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [])
+    }, []);
 
     return (
-        <div className={`w-full bg-[#000515] h-[90vh] flex flex-col justify-center items-center select-none p-[1rem] ${Store.calSans}`}>
+        <div
+            className={`w-full bg-[#000515] h-[90vh] flex flex-col justify-center items-center select-none p-[1rem] ${Store.calSans}`}
+        >
             <div className="overflow-hidden">
                 <h1 className="mainHeading text-[#42B6E3] text-[4rem] lg:text-[8rem]">
                     bitstobytes
