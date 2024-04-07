@@ -10,9 +10,7 @@ import instagram from "@/assets/instagram.png";
 import linkedin from "@/assets/linkedin.png";
 import github from "@/assets/github.png";
 import twitter from "@/assets/twitter.png";
-import HoverCard from "@darenft/react-3d-hover-card";
 
-import "@darenft/react-3d-hover-card/dist/style.css";
 
 interface TeamMember {
     image: StaticImageData;
@@ -147,7 +145,7 @@ export default function Member(): React.ReactNode {
                     </div>
                 ))}
             </div>
-            <HoverCard scaleFactor={1.4}>
+          
                 <button className="bg-[#42B6E3] lg:py-[1.2rem] lg:px-[1.5rem] py-[0.9rem] px-[1rem] rounded-[2.5rem] my-[3rem]">
                     <span
                         className={`text-[#000515] lg:text-[1.5rem] font-bold text-[1rem] ${
@@ -157,7 +155,7 @@ export default function Member(): React.ReactNode {
                         Meet our Team
                     </span>
                 </button>
-            </HoverCard>
+           
 
             <h1
                 className={`text-transparent text-[5rem] lg:text-[10rem] leading-[7rem] lg:leading-[11rem] ${
