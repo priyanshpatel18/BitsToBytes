@@ -75,9 +75,8 @@ export default function Member(): React.ReactNode {
     return (
         <div className="w-full min-h-[100vh] bg-[#F2F2F2] flex flex-col items-center py-[4rem]">
             <h1
-                className={`text-transparent text-[5rem] lg:text-[10rem] leading-[9rem] ${
-                    store.getState().calSans
-                } uppercase tracking-[1rem] lg:tracking-[2rem] text-stroke-dark lg:flex lg:gap-[2.5rem] `}
+                className={`text-transparent text-[5rem] lg:text-[10rem] leading-[9rem] ${store.getState().calSans
+                    } uppercase tracking-[1rem] lg:tracking-[2rem] text-stroke-dark lg:flex lg:gap-[2.5rem] `}
             >
                 <span className="hidden lg:block">our</span> team
             </h1>
@@ -90,23 +89,21 @@ export default function Member(): React.ReactNode {
                         <Image
                             src={member.image}
                             alt="teamMember"
-                            className="rounded-lg "
+                            className="rounded-lg lg:w-[100%]"
                         />
                         <div className="absolute bg-[#42B6E3] bottom-[1rem] left-[50%] transform translate-x-[-50%] w-[90%] rounded-[5rem] border-2 border-[#000515]">
                             <div
                                 className={`flex flex-col items-center p-[1rem] gap-[0.5rem]`}
                             >
                                 <span
-                                    className={`text-[1.2rem] lg:text-[1.5rem] lg:leading-[1.5rem] leading-[1.2rem]  ${
-                                        store.getState().calSans
-                                    }`}
+                                    className={`text-[1.2rem] lg:text-[1.5rem] lg:leading-[1.5rem] leading-[1.2rem]  ${store.getState().calSans
+                                        }`}
                                 >
                                     {member.name}
                                 </span>
                                 <span
-                                    className={` ${
-                                        store.getState().poppins
-                                    } text-[1rem] leading-[1rem] lg:text-[1.3rem] lg:leading-[1.3rem]`}
+                                    className={` ${store.getState().poppins
+                                        } text-[1rem] leading-[1rem] lg:text-[1.3rem] lg:leading-[1.3rem]`}
                                 >
                                     {member.position}
                                 </span>
@@ -145,22 +142,20 @@ export default function Member(): React.ReactNode {
                     </div>
                 ))}
             </div>
-          
-                <button className="bg-[#42B6E3] lg:py-[1.2rem] lg:px-[1.5rem] py-[0.9rem] px-[1rem] rounded-[2.5rem] my-[3rem]">
-                    <span
-                        className={`text-[#000515] lg:text-[1.5rem] font-bold text-[1rem] ${
-                            store.getState().poppins
+
+            <button className="bg-[#42B6E3] lg:py-[1.2rem] lg:px-[1.5rem] py-[0.9rem] px-[1rem] rounded-[2.5rem] my-[3rem]">
+                <span
+                    className={`text-[#000515] lg:text-[1.5rem] font-bold text-[1rem] ${store.getState().poppins
                         }`}
-                    >
-                        Meet our Team
-                    </span>
-                </button>
-           
+                >
+                    Meet our Team
+                </span>
+            </button>
+
 
             <h1
-                className={`text-transparent text-[5rem] lg:text-[10rem] leading-[7rem] lg:leading-[11rem] ${
-                    store.getState().calSans
-                } uppercase tracking-[1rem] lg:tracking-[2rem] text-stroke-dark lg:flex lg:gap-[2.5rem]`}
+                className={`text-transparent text-[5rem] lg:text-[10rem] leading-[7rem] lg:leading-[11rem] ${store.getState().calSans
+                    } uppercase tracking-[1rem] lg:tracking-[2rem] text-stroke-dark lg:flex lg:gap-[2.5rem]`}
             >
                 <span className="hidden lg:block ">committee</span>
                 <span className="block lg:hidden">board</span>
@@ -178,16 +173,14 @@ export default function Member(): React.ReactNode {
                         />
                         <div className="p-[1rem] w-[100%] flex flex-col items-center text-center gap-[1rem]">
                             <span
-                                className={` ${
-                                    store.getState().calSans
-                                } text-[1.3rem] leading-[1.3rem]`}
+                                className={` ${store.getState().calSans
+                                    } text-[1.3rem] leading-[1.3rem]`}
                             >
                                 {member.name}
                             </span>
                             <span
-                                className={` ${
-                                    store.getState().poppins
-                                } text-[1.1rem] leading-[1.1rem]`}
+                                className={` ${store.getState().poppins
+                                    } text-[1.1rem] leading-[1.1rem]`}
                             >
                                 {member.position}
                             </span>

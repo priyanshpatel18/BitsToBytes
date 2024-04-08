@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+// import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
     title: "Bits to Bytes",
@@ -14,8 +15,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="bg-[#000515] text-[10px] lg:text-[16px] ">
+                {/* <Analytics /> */}
                 <Navbar />
-
                 {children}
             </body>
         </html>

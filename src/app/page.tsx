@@ -5,6 +5,8 @@ import LandingPage from "@/components/LandingPage";
 import About from "@/components/About";
 import gsap from "gsap";
 import Member from "@/components/Member";
+import Footer from "@/components/Footer";
+import Events from "@/components/Events";
 
 export default function Home(): React.ReactNode {
     useEffect(() => {
@@ -29,11 +31,13 @@ export default function Home(): React.ReactNode {
         );
     }, []);
 
-    return (
-        <main>
-            <LandingPage />
-            <About />
-            <Member />
-        </main>
-    );
+  return (
+    <main>
+      <LandingPage />
+      <About />
+      <Member />
+      <Events />
+      <Footer />
+    </main>
+  );
 }
