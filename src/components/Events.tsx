@@ -8,8 +8,7 @@ export default function Events(): React.ReactNode {
     function handleScroll() {
       if (eventsContainerRef.current) {
         const containerRect = eventsContainerRef.current.getBoundingClientRect();
-        const topRelativeToViewport = containerRect.top + window.screenTop;
-        console.log(topRelativeToViewport);
+        // console.log(containerRect.top);
       }
     }
 
